@@ -1,0 +1,20 @@
+<% include partials/header2 %>
+
+<h1 id="banner">
+	<div class="homeBtn">
+		<a href="/"><i class="fas fa-home"></i></a>
+		<span>HOME</span>
+	</div>
+	<div class="bannerText">Search for a movie!!</div>
+</h1>
+
+<form action="/results" method="GET" id="search" class="form-inline form">
+	<input type="text" placeholder="Search Term" name="search" title="Search" required>
+	<!-- <input class="btn btn-light" id="btn" type="submit"> -->
+</form>
+
+<div class="qoute" title="Get Another">
+	<h4 id="message">"Hasta la vista, baby."</h4>
+	<h4 id="title2">- Terminator 2: Judgment Day</h4>
+</div>
+<% include partials/footer %>

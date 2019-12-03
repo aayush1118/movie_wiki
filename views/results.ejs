@@ -1,0 +1,33 @@
+<% include partials/header %>
+
+<h1 id="banner">
+	<div class="homeBtn">
+		<a href="/"><i class="fas fa-home"></i></a>
+		<span>HOME</span>
+	</div>
+	<div class="bannerText">Search for a movie!!</div>
+</h1>
+<form action="/results" method="GET" id="result" class="form-inline form">
+	<input type="text" placeholder="Search Term" name="search">
+	<!-- <input class="btn btn-light" id="btn" type="submit"> -->
+</form>
+
+<div id= "container">
+	<% data["Search"].forEach(function(movie){ %>
+	<form action="/results/movie" method="post">
+		<button value="<%=movie["imdbID"]%>" name="imdbID">
+			<div class="card" >
+				<img src="<%= movie["Poster"] %>" class="card-img">
+				<div class="card-body">
+					<h6 class="card-subtitle text-muted"><%= movie["Type"] %></h6>
+					<h5 class="card-title"><%= movie["Title"] %></h5>
+				
+				</div>
+			</div>
+		</button>
+	</form>
+
+	<%});%>	
+</div>
+
+<% include partials/footer %>

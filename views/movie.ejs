@@ -1,0 +1,33 @@
+<% include partials/header %>
+
+<h1 id="banner">
+	<div class="homeBtn">
+		<a href="/"><i class="fas fa-home"></i></a>
+		<span>HOME</span>
+	</div>
+	<div class="bannerText">Search for a movie!!</div>
+</h1>
+<form action="/results" method="GET" id="result" class="form-inline form">
+	<input type="text" placeholder="Search Term" name="search">
+	<!-- <input class="btn btn-light" id="btn" type="submit"> -->
+</form>
+
+<div id="container2">
+    <img src="<%=data["Poster"]%>" class="poster-img">
+    <div id="details"> 
+        <h4 id="title"><%=data["Title"]%></h4>
+        <div id="subDetails">
+            <h5><%=data["Genre"]%></h5>
+            <h5><%=data["Type"]%></h5>
+            <h5><%=data["Released"]%></h5>
+            <h5><%=data["Year"]%></h5>
+        </div>
+
+
+    <p class="plot"><%=data["Plot"]%></p>
+    </div>
+
+</div>
+
+
+<% include partials/footer %>
