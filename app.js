@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const request = require("request");
 const bodyParser = require("body-parser");
+var PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({extended:true}));
 
@@ -34,6 +35,6 @@ app.post("/results/movie",function(req,res){
 	});
 });
 
-app.listen(3000,()=>{
+app.listen(PORT,()=>{
 	console.log("server started")
 });
